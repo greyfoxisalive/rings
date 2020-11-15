@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start</title>
+<script>
+	function goToView(id){	
+	var current_element = document.getElementsByClassName('display-visible')[0];
+	current_element.classList.remove('display-visible');
+	current_element.classList.add('display-none'); 	
+	console.debug(id);
+	var element = document.getElementById(id);
+	element.classList.remove('display-none');
+	element.classList.add('fadeIn'); 
+	element.classList.add('display-visible');
+		
+	//element.style.opacity = "0.9";
+	//element.style.filter  = 'alpha(opacity=90)';
+	var previous_view_id; 
+	var xpath = function(xpathToExecute){
+    var result = [];
+    var nodesSnapshot = document.evaluate(xpathToExecute, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+    for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ ){
+      result.push( nodesSnapshot.snapshotItem(i) );
+    }
+    return result;
+}
+	}
+
+	function initializePage(){
+		var element = document.getElementById('Start');
+		element.classList.remove("display-none");
+	}
+
+</script>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Start;
+		--web-view-id: Start;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Start;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Start {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Start;
+		--web-view-id: Start;
+		--web-enable-deep-linking: true;
+	}
+	#cover {
+		position: absolute;
+		width: 431px;
+		height: 371px;
+		left: -28px;
+		top: 18vh;
+		overflow: visible;
+	}
+	#header {
+		left: 19px;
+		top: 30px;
+		position: absolute;
+		overflow: visible;
+		width: 195px;
+		white-space: nowrap;
+		line-height: 41px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 39px;
+		color: rgba(112,112,112,1);
+	}
+	#Next_Button {
+		position: absolute;
+		width: 308px;
+		height: 63px;
+		left: 34px;
+		
+		overflow: visible;
+		--web-animation: fadein 0.6s ease-in;
+		--web-action-type: page;
+		--web-action-target: History_Info.html;
+		cursor: pointer;
+	}
+
+	.nav {
+		top: 81vh;
+		position: relative;
+	}
+	#Rectangle_2 {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 308px;
+		height: 63px;
+		left: 0px;
+		top: 0px;
+	}
+	#NEXT {
+		left: 0px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 100%;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: center;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#NEXT span{
+		display: table;
+    	margin: 0 auto;
+	}
+	#Logo {
+		position: absolute;
+		width: 83px;
+		height: 83px;
+		left: 275px;
+		top: 30px;
+		overflow: visible;
+	}
+	#pngwingcom {
+		position: absolute;
+		width: 83px;
+		height: 83px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#SPHERE {
+		left: 22px;
+		top: 34px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Judson;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(88,85,85,1);
+	}
+	#Repeat_Grid_2 {
+		position: absolute;
+		width: 43px;
+		height: 10px;
+		left: 25px;
+		top: 73px;
+		overflow: hidden;
+	}
+	#Repeat_Grid_2_0 {
+		position: absolute;
+		width: 42px;
+		height: 10px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#DESIGNED_BY {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		line-height: 10px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 7px;
+		color: rgba(112,112,112,1);
+	}
+	#DESCRIPTION {
+		position: absolute;
+		width: 270px;
+		height: 95.5px;
+		left: 53px;
+		top: 66vh;
+		overflow: visible;
+	}
+	#State_of_art_design_____based_ {
+		left: 0px;
+		top: 15.5px;
+		position: absolute;
+		overflow: visible;
+		width: 271px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(112,112,112,1);
+		text-transform: uppercase;
+	}
+	#Path_1 {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		left: 268.5px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#BOTTOM {
+		position: absolute;
+		width: 162px;
+		height: 34px;
+		left: 107px;
+		bottom: 1vh;
+		overflow: visible;
+	}
+	#ID2020_ALL_RIGHTS_RESERVED {
+		left: 0px;
+		top: 17px;
+		position: absolute;
+		overflow: visible;
+		width: 163px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(112,112,112,1);
+	}
+	.background {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(252,247,239,1);
+	}
+	.mainblock{
+		margin: 0 auto;
+    	position: relative !important;
+	}
+
+	#SPHERE_STUDIO {
+		left: 33px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 97px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(112,112,112,1);
+	}
+
+	#History_Info {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(45,45,45,1);
+		overflow: hidden;
+		--web-view-name: Histrory Info;
+		--web-view-id: History_Info;
+		--web-enable-deep-linking: true;
+	}
+	#DESCHISTORY {
+		position: absolute;
+		width: 276px;
+		height: 144px;
+		left: 52px;
+		top: 62vh;
+		overflow: visible;
+	}
+	#annuli_astronomici {
+		left: 31px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 211px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -4.5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 19px;
+		color: rgba(181,137,11,1);
+		text-decoration: underline;
+		text-transform: uppercase;
+	}
+	#also_known_as_Gemmas_rings__ar {
+		left: 0px;
+		top: 31px;
+		position: absolute;
+		overflow: visible;
+		width: 277px;
+		white-space: nowrap;
+		line-height: 18px;
+		margin-top: -0.5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(181,137,11,1);
+		text-transform: uppercase;
+	}
+	#cover_smaller {
+		position: absolute;
+		width: 273.071px;
+		height: 304px;
+		left: 51px;
+		top: 19vh;
+		overflow: visible;
+	}
+	#BACK {
+		left: 167px;
+		top: 75px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Start.html;
+		cursor: pointer;
+		line-height: 25px;
+		margin-top: -4px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(181,137,11,1);
+		text-decoration: underline;
+	}
+	.display-none{
+		display: none;
+	}
+
+	#Rectangle_black {
+		fill: rgba(45,45,45,1);
+		stroke: rgba(181,137,11,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.gold_color{
+		color: rgba(181,137,11,1);
+	}
+
+	#Showcase {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Showcase;
+		--web-view-id: Showcase;
+		--web-enable-deep-linking: true;
+	}
+	.covers{
+		top: 18vh;
+		position: relative;
+	}
+	#PENDANT {
+		position: absolute;
+		width: 252px;
+		height: 245px;
+		left: 16.532px;
+		top: 230.336px;
+		overflow: visible;
+	}
+	#RING_ON_HAND {
+		position: absolute;
+		width: 351.539px;
+		height: 351.218px;
+		left: 57.446px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Gift_Box {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Gift Box;
+		--web-view-id: Gift_Box;
+		--web-enable-deep-linking: true;
+	}
+	#CAT {
+		position: absolute;
+		width: 230px;
+		height: 221px;
+		left: 48px;
+		top: -110px;
+		overflow: visible;
+	}
+	#box {
+		position: absolute;
+		width: 317px;
+		height: 217px;
+		left: 30px;
+		top: 28vh;
+		overflow: visible;
+	}
+	#even_cats_like_to_play_with {
+		left: 0px;
+		top: -20px;
+		position: absolute;
+		overflow: visible;
+		width: 273px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(112,112,112,1);
+		text-transform: uppercase;
+	}
+	#PRICE_AND_DETAILS {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Start;
+		--web-view-id: Start;
+		--web-enable-deep-linking: true;
+	}
+	#ID45 {
+		left: 112px;
+		top: -35px;
+		position: absolute;
+		overflow: visible;
+		width: 59px;
+		white-space: nowrap;
+		line-height: 39px;
+		margin-top: -1.5px;
+		text-align: center;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(112,112,112,1);
+	}
+	#delivery_included {
+		position: absolute;
+		width: 194px;
+		height: 24px;
+		left: 45px;
+		top: 10px;
+		overflow: visible;
+	}
+	#DELIVERY_INCLUDED_u {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 195px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(112,112,112,1);
+		text-transform: uppercase;
+	}
+	#DESCRIPTION_v {
+		position: absolute;
+		width: 267px;
+		height: 68.5px;
+		left: 0px;
+   		top: 35px;
+		overflow: visible;
+	}
+	#ID5_ELEMENTS_CONNECTED_INTO_ON {
+		left: 4.5px;
+		top: 8.5px;
+		position: absolute;
+		overflow: visible;
+		width: 259px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -2.5px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(112,112,112,1);
+		text-transform: uppercase;
+	}
+
+	#Choose_size {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Start;
+		--web-view-id: Start;
+		--web-enable-deep-linking: true;
+	}
+	#SIZE_TYPE {
+		position: absolute;
+		width: 283px;
+		height: 41px;
+		left: 50px;
+		top: 19.5vh;
+		overflow: visible;
+	}
+	#size_button {
+		position: absolute;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2 {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+	}
+	#US {
+		left: 52px;
+		top: 7px;
+		position: absolute;
+		overflow: visible;
+		width: 26px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#size_button_t {
+		position: absolute;
+		width: 128px;
+		height: 41px;
+		left: 155px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2_u {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_u {
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+	}
+	#EU {
+		left: 52px;
+		top: 7px;
+		position: absolute;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#SIZES {
+		position: absolute;
+		width: 128px;
+		height: 392px;
+		left: 124px;
+		top: 26.5vh;
+		overflow: visible;
+	}
+	#size_button_ {
+		position: absolute;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 54px;
+		overflow: visible;
+	}
+	#Rectangle_2_ {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_ {
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+	}
+	#size_button_bm {
+		position: relative;
+		width: 128px;
+		height: 41px;
+		margin-top: 10px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2_bn {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bn {
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+	}
+	#ID5 {
+		left: 58px;
+		top: 7px;
+		position: absolute;
+		overflow: visible;
+		width: 13px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: center;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#Delivery_Info_1 {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Delivery Info 1;
+		--web-view-id: Delivery_Info_1;
+		--web-enable-deep-linking: true;
+	}
+	#Delivery_Info_1 {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Delivery Info 1;
+		--web-view-id: Delivery_Info_1;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
+	}
+	#header {
+		left: 19px;
+		top: 30px;
+		position: absolute;
+		overflow: visible;
+		width: 193px;
+		white-space: nowrap;
+		line-height: 41px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 39px;
+		color: rgba(112,112,112,1);
+	}
+	#ID12_STEPS {
+		left: 27px;
+		top: 123px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#EMAIL_FIELD {
+		position: absolute;
+		width: 297px;
+		height: 65px;
+		left: 27px;
+		top: 171px;
+		overflow: visible;
+	}
+	#EMAIL {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 51px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 44px;
+		left: 0px;
+		top: 21px;
+	}
+	#first_name_field {
+		position: absolute;
+		width: 297px;
+		height: 66px;
+		left: 27px;
+		top: 244px;
+		overflow: visible;
+	}
+	#FIRST_NAME {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_v {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_v {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 45px;
+		left: 0px;
+		top: 21px;
+	}
+	#last_name_field {
+		position: absolute;
+		width: 297px;
+		height: 65px;
+		left: 27px;
+		top: 317px;
+		overflow: visible;
+	}
+	#LAST_NAME {
+		left: 3px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_y {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_y {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 44px;
+		left: 0px;
+		top: 21px;
+	}
+	#replies_block {
+		position: absolute;
+		width: 315px;
+		height: 115px;
+		left: 30px;
+		top: 60vh;
+		overflow: visible;
+	}
+	#reply_element {
+		position: absolute;
+		width: 315px;
+		height: 82px;
+		left: 0px;
+		top: 33px;
+		overflow: visible;
+	}
+	#borders_div {
+		fill: rgba(252,247,239,1);
+		stroke: rgba(196,160,58,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.borders_div {
+		overflow: visible;
+		position: absolute;
+		width: 308px;
+		height: 70.497px;
+		left: 7px;
+		top: 5.276px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#avatar {
+		position: absolute;
+		width: 82px;
+		height: 82px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#reply_text {
+		left: 92px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 186px;
+		white-space: nowrap;
+		line-height: 19px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(196,160,58,1);
+	}
+	#reply_header {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 72px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#Logo {
+		position: absolute;
+		width: 83px;
+		height: 83px;
+		left: 275px;
+		top: 30px;
+		overflow: visible;
+	}
+	#pngwingcom {
+		position: absolute;
+		width: 83px;
+		height: 83px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#SPHERE {
+		left: 22px;
+		top: 34px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		line-height: 13px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Judson;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(88,85,85,1);
+	}
+	#Repeat_Grid_2 {
+		position: absolute;
+		width: 43px;
+		height: 10px;
+		left: 25px;
+		top: 73px;
+		overflow: hidden;
+	}
+	#Repeat_Grid_2_0 {
+		position: absolute;
+		width: 42px;
+		height: 10px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Delivery_Info_2 {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(252,247,239,1);
+		overflow: hidden;
+		--web-view-name: Delivery Info 2;
+		--web-view-id: Delivery_Info_2;
+		--web-enable-deep-linking: true;
+	}
+	#street_adress_field {
+		position: absolute;
+		width: 297px;
+		height: 65px;
+		left: 39px;
+		top: 390px;
+		overflow: visible;
+	}
+	#STREET_ADDRESS {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 135px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 44px;
+		left: 0px;
+		top: 21px;
+	}
+	#city_town_field {
+		position: absolute;
+		width: 297px;
+		height: 67px;
+		left: 39px;
+		top: 246px;
+		overflow: visible;
+	}
+	#CITYTOWN {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_u {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_u {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 46px;
+		left: 0px;
+		top: 21px;
+	}
+	#country_field {
+		position: absolute;
+		width: 297px;
+		height: 65px;
+		left: 39px;
+		top: 176px;
+		overflow: visible;
+	}
+	#COUNTRY {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 79px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_x {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_x {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 44px;
+		left: 0px;
+		top: 21px;
+	}
+	#postcode_field {
+		position: absolute;
+		width: 301px;
+		height: 65px;
+		left: 37px;
+		top: 460px;
+		overflow: visible;
+	}
+	#POSTCODE {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 87px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_ {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 44px;
+		left: 4px;
+		top: 21px;
+	}
+	#state_field {
+		position: absolute;
+		width: 297px;
+		height: 67px;
+		left: 39px;
+		top: 318px;
+		overflow: visible;
+	}
+	#STATE {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		line-height: 28px;
+		margin-top: -6px;
+		text-align: center;
+		font-family: Linden Hill;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(181,137,11,1);
+	}
+	#Rectangle_3_ba {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ba {
+		position: absolute;
+		overflow: visible;
+		width: 297px;
+		height: 46px;
+		left: 0px;
+		top: 21px;
+	}
+	#ID22_STEPS {
+		left: 24px;
+		top: 123px;
+		position: absolute;
+		overflow: visible;
+		width: 92px;
+		white-space: nowrap;
+		line-height: 29px;
+		margin-top: -4.5px;
+		text-align: left;
+		font-family: Yu Gothic UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+
+
+	@media (max-height:667px){
+		#DESCHISTORY{
+			top: 62vh;
+		}
+		#cover_smaller{
+			top:16vh;
+		}
+	}
+	@media (max-height:568px){
+		#DESCRIPTION{
+			top: 75vh;
+		}
+		.nav{
+			top:95vh;
+		}
+		#DESCHISTORY{
+			top:73vh;
+		}
+		#cover_smaller{
+			top:19vh;
+		}
+		#replies_block {
+		top: 70vh;
+	}
+}
+	.fadeIn{
+		animation: fadeIn 0.7s ease-in;
+	}
+
+	.fadeOut{
+		animation: fadeOut 0.25s ease-out;
+	}
+
+	@keyframes fadeIn {
+    0% {
+    	display: none;
+        opacity: 0;
+    }
+    1% {
+    	display: block;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+    @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 0;
+    }
+    99% {
+    	opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+	.mercaet {
+		animation: mercaet 3s ease-in;
+		animation-iteration-count: infinite;
+
+	}
+    @keyframes mercaet {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    70% {
+    	opacity: 1;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+	
+</style>
+</head>
+<body onload="initializePage()">
+<div class="background">
+<div id="Start" class="mainblock display-visible">
+	<video id="cover" autoplay muted loop>
+		<source src="video.mp4" type="video/mp4">
+	</video>
+		
+	<div id="header">
+		<span>ONE RING <br/>TO RULE <br/>THEM ALL</span>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('History_Info')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>NEXT</span>
+		</div>
+	</div>
+	</div>
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="DESCRIPTION">
+		<div id="State_of_art_design_____based_">
+			<span>State of art design <br/>  ~ based on 16th century ~ <br/>  Astronomical book </span>
+		</div>
+		<svg class="Path_1" viewBox="267 0 1 1">
+			<path id="Path_1" d="M 267 0">
+			</path>
+		</svg>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+	</div>
+<div id="History_Info" class="mainblock display-none">
+		<div id="header">
+			<span>DEEPLY<br/>INSPIRED</span>
+		</div>
+		<div class="nav">
+			<div onclick="goToView('Showcase')" id="Next_Button">
+			<svg class="Rectangle_2">
+				<rect id="Rectangle_black" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+				</rect>
+			</svg>
+			<div id="NEXT">
+				<span class="gold_color">NEXT</span>
+			</div>
+		</div>
+		<div onclick="goToView('Start')" id="BACK">
+			<span>BACK</span>
+		</div></div>
+		<div id="DESCHISTORY">
+			<div id="annuli_astronomici">
+				<span style="text-transform:uppercase;">annuli astronomic</span><span style="text-transform:uppercase;">i</span>
+			</div>
+			<div id="also_known_as_Gemmas_rings__ar">
+				<span>also known as Gemma's rings, <br/>are an early astronomical<br/>instrument. <br/>FIRSTLY made and used<br/> by ancient Greeks.</span>
+			</div>
+		</div>
+		<img id="cover_smaller" class="mercaet" src="cover_smaller.png" srcset="cover_smaller.png 1x" style="image-rendering:pixelated;">
+			
+		<div id="Logo">
+			<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+				
+			<div id="SPHERE">
+				<span class="gold_color">SPHERE.</span>
+			</div>
+			<div id="Repeat_Grid_2">
+				<div id="Repeat_Grid_2_0" class="">
+					<div id="DESIGNED_BY">
+						<span>DESIGNED BY</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="BOTTOM">
+			<div id="ID2020_ALL_RIGHTS_RESERVED">
+				<span>2020 ALL RIGHTS RESERVED</span>
+			</div>
+			<div id="SPHERE_STUDIO">
+				<span>SPHERE. STUDIO</span>
+			</div>
+		</div>
+</div>
+<div id="Showcase" class="mainblock display-none" >
+	<div id="header">
+		<span>USE AS RING<br/>OR PENDANT</span>
+	</div>
+	<div class="covers">
+		<img id="PENDANT" src="PENDANT.png" srcset="PENDANT.png 1x">
+		
+		<img id="RING_ON_HAND" src="RING_ON_HAND.png" srcset="RING_ON_HAND.png 1x">
+	</div>	
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+	<div onclick="" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT" onclick="goToView('Gift_Box')">
+			<span>NEXT</span>
+		</div>
+	</div>
+	<div onclick="goToView('History_Info')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+</div>
+<div id="Gift_Box" class="mainblock display-none">
+	<div id="header">
+		<span>IT IS<br/>JOYFULL,<br/>PERFECT GIFT</span>
+	</div>
+	<div id="DESCRIPTION">
+		<div id="even_cats_like_to_play_with">
+			<span>even cat's like to play with</span>
+			<img id="CAT" src="CAT.png" srcset="CAT.png 1x">
+		</div>
+	</div>
+	<img id="box" src="box.png" srcset="box.png 1x">
+	
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('PRICE_AND_DETAILS')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>NEXT</span>
+		</div>
+	</div>
+	<div onclick="goToView('Showcase')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+</div>
+<div id="PRICE_AND_DETAILS" class="mainblock display-none">
+	<video id="cover" autoplay muted loop>
+		<source src="video.mp4" type="video/mp4">
+	</video>
+		
+	<div id="header">
+		<span>ONE RING <br/>TO RULE <br/>THEM ALL</span>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('Choose_size')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>CHOOSE SIZE</span>
+		</div>
+	</div>
+	<div onclick="goToView('Gift_Box')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="DESCRIPTION">
+		<div id="ID45">
+			<span>45$</span>
+		</div>
+		<div id="delivery_included">
+		<div id="DELIVERY_INCLUDED_u">
+			<span>*DELIVERY INCLUDED</span>
+		</div>
+		</div>
+		<div id="DESCRIPTION_v">
+			<div id="ID5_ELEMENTS_CONNECTED_INTO_ON">
+				<span>5 ELEMENTS CONNECTED INTO ONE<br/>HANDCRAFTED BY OUR MASTERS<br/>MADE FROM IONIZED COPPER</span>
+			</div>
+		<svg class="Line_1" viewBox="0 0 267 1">
+			<path id="Line_1" d="M 0 0 L 267 0">
+			</path>
+		</svg>
+	</div>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+	</div>
+<div id="Choose_size" class="mainblock display-none">
+	<div id="header">
+		<span>CHOOSE<br/>YOUR SIZE</span>
+	</div>
+	<div id="SIZE_TYPE">
+		<div id="size_button">
+			<svg class="Rectangle_2">
+				<rect id="Rectangle_2" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="US">
+				<span>US</span>
+			</div>
+		</div>
+		<div id="size_button_t">
+			<svg class="Rectangle_2_u">
+				<rect id="Rectangle_2_u" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="EU">
+				<span>EU</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('Delivery_Info_1')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>CHOOSE SIZE</span>
+		</div>
+	</div>
+	<div onclick="goToView('PRICE_AND_DETAILS')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	<div id="SIZES">
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+		<div id="size_button_bm">
+			<svg class="Rectangle_2_bn">
+				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
+				</rect>
+			</svg>
+			<div id="ID5">
+				<span>5</span>
+			</div>
+		</div>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+</div>
+<div id="Delivery_Info_1" class="mainblock display-none">
+	<div id="header">
+		<span>WHERE TO<br/>DELIVER</span>
+	</div>
+	<div id="ID12_STEPS">
+		<span>1/2 STEPS</span>
+	</div>
+	<div id="EMAIL_FIELD">
+		<div id="EMAIL">
+			<span>EMAIL</span>
+		</div>
+		<svg class="Rectangle_3">
+			<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="297" height="44">
+			</rect>
+		</svg>
+	</div>
+	<div id="first_name_field">
+		<div id="FIRST_NAME">
+			<span>FIRST NAME</span>
+		</div>
+		<svg class="Rectangle_3_v">
+			<rect id="Rectangle_3_v" rx="0" ry="0" x="0" y="0" width="297" height="45">
+			</rect>
+		</svg>
+	</div>
+	<div id="last_name_field">
+		<div id="LAST_NAME">
+			<span>LAST NAME</span>
+		</div>
+		<svg class="Rectangle_3_y">
+			<rect id="Rectangle_3_y" rx="0" ry="0" x="0" y="0" width="297" height="44">
+			</rect>
+		</svg>
+	</div>
+	<div id="replies_block">
+		<div id="reply_element">
+			<svg class="borders_div" viewBox="0 0 308 70.497">
+				<path id="borders_div" d="M 33 0 L 275 0 C 293.2254028320313 0 308 12.7020149230957 308 28.37074851989746 L 308 42.12626266479492 C 308 57.79498672485352 293.2254028320313 70.49700927734375 275 70.49700927734375 L 33 70.49700927734375 C 14.77460289001465 70.49700927734375 0 57.79498672485352 0 42.12626266479492 L 0 28.37074851989746 C 0 12.7020149230957 14.77460289001465 0 33 0 Z">
+				</path>
+			</svg>
+			<img id="avatar" src="avatar.png" srcset="avatar.png 1x">
+				
+			<div id="reply_text">
+				<span>Unbelivable beatiness <br>and complexity! LOVE IT!</span>
+			</div>
+		</div>
+		<div id="reply_header">
+			<span>REPLIES</span>
+		</div>
+	</div>
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('Delivery_Info_2')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>CHOOSE SIZE</span>
+		</div>
+	</div>
+	<div onclick="goToView('Choose_size')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+</div>
+<div id="Delivery_Info_2" class="mainblock display-none">
+	<div id="header">
+		<span>WHERE TO<br/>DELIVER</span>
+	</div>
+	<div id="street_adress_field">
+		<div id="STREET_ADDRESS">
+			<span>STREET ADDRESS</span>
+		</div>
+		<svg class="Rectangle_3">
+			<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="297" height="44">
+			</rect>
+		</svg>
+	</div>
+	<div id="city_town_field">
+		<div id="CITYTOWN">
+			<span>CITY/TOWN</span>
+		</div>
+		<svg class="Rectangle_3_u">
+			<rect id="Rectangle_3_u" rx="0" ry="0" x="0" y="0" width="297" height="46">
+			</rect>
+		</svg>
+	</div>
+	<div id="country_field">
+		<div id="COUNTRY">
+			<span>COUNTRY</span>
+		</div>
+		<svg class="Rectangle_3_x">
+			<rect id="Rectangle_3_x" rx="0" ry="0" x="0" y="0" width="297" height="44">
+			</rect>
+		</svg>
+	</div>
+	<div id="postcode_field">
+		<div id="POSTCODE">
+			<span>POSTCODE</span>
+		</div>
+		<svg class="Rectangle_3_">
+			<rect id="Rectangle_3_" rx="0" ry="0" x="0" y="0" width="297" height="44">
+			</rect>
+		</svg>
+	</div>
+	<div id="state_field">
+		<div id="STATE">
+			<span>STATE</span>
+		</div>
+		<svg class="Rectangle_3_ba">
+			<rect id="Rectangle_3_ba" rx="0" ry="0" x="0" y="0" width="297" height="46">
+			</rect>
+		</svg>
+	</div>
+	<div id="ID22_STEPS">
+		<span>2/2 STEPS</span>
+	</div>
+	<div id="Logo">
+		<img id="pngwingcom" src="pngwingcom.png" srcset="pngwingcom.png 1x">
+			
+		<div id="SPHERE">
+			<span>SPHERE.</span>
+		</div>
+		<div id="Repeat_Grid_2">
+			<div id="Repeat_Grid_2_0" class="">
+				<div id="DESIGNED_BY">
+					<span>DESIGNED BY</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+	<div onclick="goToView('Confirmation_page')" id="Next_Button">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
+			</rect>
+		</svg>
+		<div id="NEXT">
+			<span>CHOOSE SIZE</span>
+		</div>
+	</div>
+	<div onclick="goToView('Delivery_Info_1')" id="BACK">
+		<span>BACK</span>
+	</div>
+	</div>
+	<div id="BOTTOM">
+		<div id="ID2020_ALL_RIGHTS_RESERVED">
+			<span>2020 ALL RIGHTS RESERVED</span>
+		</div>
+		<div id="SPHERE_STUDIO">
+			<span>SPHERE. STUDIO</span>
+		</div>
+	</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
