@@ -72,7 +72,7 @@
     	street_address: document.getElementById('street_address_data').value,
     	postcode: document.getElementById('postcode_data').value
     }; 
-	emailjs.send('user_rjWjQCcLwcd42EJSrPpjX', 'template_8qvvplx', templateParams)
+	emailjs.send('service_2sj0gmx', 'template_8qvvplx', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
