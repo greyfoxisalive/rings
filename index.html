@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start</title>
 <script>
+	var size;
 	function goToView(id){	
 	var current_element = document.getElementsByClassName('display-visible')[0];
 	current_element.classList.remove('display-visible');
 	current_element.classList.add('display-none'); 	
-	console.debug(id);
 	var element = document.getElementById(id);
 	history.pushState('data to be passed', 'AstroRing', id);
 	element.classList.remove('display-none');
 	element.classList.add('fadeIn'); 
 	element.classList.add('display-visible');
-		
+	
 	//element.style.opacity = "0.9";
 	//element.style.filter  = 'alpha(opacity=90)';
 	var previous_view_id; 
@@ -35,6 +35,49 @@
 		element.classList.remove("display-none");
 	}
 
+	function onAddressChange(){
+		var address = window.location.href;
+		var splitted = address.split('/');
+		var page = splitted[splitted.lenth-1];
+		goToView(page);
+	}
+
+	function selectSize(selected_element){
+		try{
+		document.getElementsByClassName('selected-size')[0].classList.remove('selected-size');
+	} catch(error){};
+		selected_element.classList.add('selected-size');
+	}
+</script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_rjWjQCcLwcd42EJSrPpjX");
+   })();
+</script>
+<script type="text/javascript">
+	function formOrder{
+		var templateParams ={
+		time: Date(),
+		email: document.getElementById('email_data').value,
+    	first_name: document.getElementById('first_name_data').value,
+    	last_name: document.getElementById('last_name_data').value,
+    	size_type: 'US',
+    	size: document.getElementsByClassName('selected-size')[0].nextElementSibling.getElementsByTagName('span').innerHTML,
+    	country: document.getElementById('country_data').value,
+    	city_town: document.getElementById('city_town_data').value,
+    	state: document.getElementById('state_data').value,
+    	street_address: document.getElementById('{street_address_data').value,
+    	postcode: document.getElementById('{postcode_data').value
+    }; 
+	emailjs.send('user_rjWjQCcLwcd42EJSrPpjX', 'template_8qvvplx', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });}
 </script>
 	<!-- Facebook Pixel Code -->
 <script>
@@ -56,6 +99,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 <style id="applicationStylesheet" type="text/css">
 	@import url('https://fonts.googleapis.com/css2?family=Linden+Hill&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
 	.mediaViewInfo {
 		--web-view-name: Start;
 		--web-view-id: Start;
@@ -721,7 +765,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		left: 0px;
 		top: 0px;
 	}
-	#ID5 {
+	.size-button {
 		left: 59px;
 		top: 10px;
 		position: absolute;
@@ -736,6 +780,11 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(112,112,112,1);
+	}
+
+	.selected-size{
+		fill: rgb(253 253 253);
+    	stroke-width: 2px;
 	}
 	#Delivery_Info_1 {
 		position: absolute;
@@ -839,6 +888,10 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		height: 44px;
 		left: 0px;
 		top: 21px;
+		padding-left: 15px;
+    	font-size: 17px;
+    	border: 2px solid rgb(182 180 176);
+    	background-color: #fcf7ef;
 	}
 	#first_name_field {
 		position: absolute;
@@ -1683,66 +1736,66 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 	</div>
 	<div id="SIZES">
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID5">5</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div id="ID5" class="size-button">
+				<span id="ID6">6</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID7">7</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID8">8</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID9">9</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID10">10</span>
 			</div>
 		</div>
 		<div id="size_button_bm">
-			<svg class="Rectangle_2_bn">
+			<svg class="Rectangle_2_bn" onclick="selectSize(this)"> 
 				<rect id="Rectangle_2_bn" rx="20.5" ry="20.5" x="0" y="0" width="128" height="41">
 				</rect>
 			</svg>
-			<div id="ID5">
-				<span>5</span>
+			<div class="size-button">
+				<span id="ID11">11</span>
 			</div>
 		</div>
 	</div>
@@ -1766,7 +1819,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="EMAIL">
 			<span>EMAIL</span>
 		</div>
-		<svg class="Rectangle_3">
+		<input id="email_data" class="Rectangle_3">
 			<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="297" height="44">
 			</rect>
 		</svg>
@@ -1775,7 +1828,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="FIRST_NAME">
 			<span>FIRST NAME</span>
 		</div>
-		<svg class="Rectangle_3_v">
+		<input id="first_name_data" class="Rectangle_3_v">
 			<rect id="Rectangle_3_v" rx="0" ry="0" x="0" y="0" width="297" height="45">
 			</rect>
 		</svg>
@@ -1784,7 +1837,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="LAST_NAME">
 			<span>LAST NAME</span>
 		</div>
-		<svg class="Rectangle_3_y">
+		<input id="last_name_data" class="Rectangle_3_y">
 			<rect id="Rectangle_3_y" rx="0" ry="0" x="0" y="0" width="297" height="44">
 			</rect>
 		</svg>
@@ -1826,7 +1879,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 			</rect>
 		</svg>
 		<div id="NEXT">
-			<span>CHOOSE SIZE</span>
+			<span>NEXT</span>
 		</div>
 	</div>
 	<div onclick="goToView('Choose_size')" id="BACK">
@@ -1850,7 +1903,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="STREET_ADDRESS">
 			<span>STREET ADDRESS</span>
 		</div>
-		<svg class="Rectangle_3">
+		<input id="street_address_data" class="Rectangle_3">
 			<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="297" height="44">
 			</rect>
 		</svg>
@@ -1859,7 +1912,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="CITYTOWN">
 			<span>CITY/TOWN</span>
 		</div>
-		<svg class="Rectangle_3_u">
+		<input id="city_town_data" class="Rectangle_3_u">
 			<rect id="Rectangle_3_u" rx="0" ry="0" x="0" y="0" width="297" height="46">
 			</rect>
 		</svg>
@@ -1868,7 +1921,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="COUNTRY">
 			<span>COUNTRY</span>
 		</div>
-		<svg class="Rectangle_3_x">
+		<input id="country_data" class="Rectangle_3_x">
 			<rect id="Rectangle_3_x" rx="0" ry="0" x="0" y="0" width="297" height="44">
 			</rect>
 		</svg>
@@ -1877,7 +1930,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="POSTCODE">
 			<span>POSTCODE</span>
 		</div>
-		<svg class="Rectangle_3_">
+		<input id="postcode_data" class="Rectangle_3_">
 			<rect id="Rectangle_3_" rx="0" ry="0" x="0" y="0" width="297" height="44">
 			</rect>
 		</svg>
@@ -1886,7 +1939,7 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 		<div id="STATE">
 			<span>STATE</span>
 		</div>
-		<svg class="Rectangle_3_ba">
+		<input id="state_data" class="Rectangle_3_ba">
 			<rect id="Rectangle_3_ba" rx="0" ry="0" x="0" y="0" width="297" height="46">
 			</rect>
 		</svg>
@@ -1914,8 +1967,8 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 			<rect id="Rectangle_2" rx="31.5" ry="31.5" x="0" y="0" width="308" height="63">
 			</rect>
 		</svg>
-		<div id="NEXT">
-			<span>CHOOSE SIZE</span>
+		<div id="NEXT" onclick="formOrder();">
+			<span>CONFIRM ORDER</span>
 		</div>
 	</div>
 	<div onclick="goToView('Delivery_Info_1')" id="BACK">
