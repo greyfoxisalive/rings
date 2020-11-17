@@ -46,7 +46,7 @@
 		try{
 		document.getElementsByClassName('selected-size')[0].classList.remove('selected-size');
 	} catch(error){};
-		selected_element.getElementsByTagName('rect').classList.add('selected-size');
+		selected_element.getElementsByTagName('rect')[0].classList.add('selected-size');
 	}
 </script>
 	<script type="text/javascript"
@@ -783,8 +783,8 @@ src="https://www.facebook.com/tr?id=3352346131559508&ev=PageView&noscript=1"
 	}
 
 	.selected-size{
-		fill: rgb(253 253 253);
-    	stroke-width: 2px;
+		fill: rgb(253 253 253) !important;
+    	stroke-width: 2px !important;
 	}
 	#Delivery_Info_1 {
 		position: absolute;
