@@ -65,7 +65,7 @@
     	first_name: document.getElementById('first_name_data').value,
     	last_name: document.getElementById('last_name_data').value,
     	size_type: 'US',
-    	size: document.getElementsByClassName('selected-size')[0].nextElementSibling.getElementsByTagName('span')[0].innerHTML,
+    	size: document.getElementsByClassName('selected-size')[0].parentElement.nextElementSibling.getElementsByTagName('span')[0].innerHTML,
     	country: document.getElementById('country_data').value,
     	city_town: document.getElementById('city_town_data').value,
     	state: document.getElementById('state_data').value,
